@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Greekinator</title>
+    <style type="text/css">
+        textarea { 
+            background-color: #eeede3;
+            width:100%;
+        }
+
+        button{
+            background-color: #3e5989 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class = "col">
+
+        </div>
+        <div class = "col">
+            <div class=class="form-group">
+
+               <form align="center" id = #my-form action="/" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Greekinate!</button>
+                </form> 
+            </div>
+            
+            <p>
+        Greekinator uses the power of AI to generate music ideas based on a text mood. Just type something and see what happens.You can also use a story from <a target="_blank" href="https://americanliterature.com/100-great-short-stories">here</a>. The more passionate the text, the more interesting results
+        
+            </p>
+        </div>
+        <div class = "col">
+
+        </div>
+    </div>
+    
+    
+    
+    
+
+    {% if form_data %}
+        {{form_data}}
+
+    {% endif %}
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script language="javascript" type="text/javascript" src="{% static 'greekinator/vendor/p5.js' %}"></script>    
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+  <script type="text/javascript" src="{% static 'greekinator/js/raining.js' %}"></script>
+
+
+</body>
+</html>
