@@ -2,9 +2,11 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from .textForm import textForm
 from textblob import TextBlob
+import nltk
 import json
 
 def get_info(request):
+    nltk.download('punkt')
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
