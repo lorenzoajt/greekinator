@@ -8,5 +8,4 @@ psycopg2==2.8.4
 psycopg2-binary==2.8.4
 pytz==2019.1
 textblob==0.15.3
-Theano==1.0.3+2.g3e47d39.dirty
 whitenoise==4.1.4
